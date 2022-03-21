@@ -1,5 +1,3 @@
-  GNU nano 2.0.6                                               File: intro.md                                                                                                      
-
 # Test of the book
 
 This is a test.
