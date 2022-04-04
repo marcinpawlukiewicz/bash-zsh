@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; My sample book</title>
+    <title>Scripting differences: &#8212; My sample book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,8 +42,16 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Completion" href="completion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -87,7 +95,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="commands.html">
    Commands
@@ -118,8 +126,8 @@
    Completion
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scripting_differences.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Scripting differences:
   </a>
  </li>
@@ -156,6 +164,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/scripting_differences.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -167,7 +192,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/marcinpawlukiewicz/bash-zsh/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/marcinpawlukiewicz/bash-zsh/issues/new?title=Issue%20on%20page%20%2Fscripting_differences.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -195,7 +220,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Scripting differences:</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -206,19 +231,86 @@
             
               <div>
                 
+  <div class="tex2jax_ignore mathjax_ignore section" id="scripting-differences">
+<h1>Scripting differences:<a class="headerlink" href="#scripting-differences" title="Permalink to this headline">¶</a></h1>
+<p>Generally, the base of the both shells is similar as zsh is based on bash. However, the scripting differences are quite big if we talking about the code conversion from one shell to another. For example the code is bash:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
-<h1 id="index">Index</h1>
+function countArguments() {
+    echo &quot;${#@}&quot;
+}
 
-<div class="genindex-jumpbox">
- 
+wordlist=&quot;one two three four five&quot;
+
+echo &quot;normal substitution, no quotes:&quot;
+countArguments $wordlist
+# -&gt; 5
+
+echo &quot;substitution with quotes&quot;
+countArguments &quot;$wordlist&quot;
+# -&gt; 1
+</pre></div>
+</div>
+<p>As we can see, bash sees white spaces and separates arguments. However, zsh behaves differently:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/zsh
+emulate -LR zsh # reset zsh options
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+function countArguments() {
+    echo &quot;${#@}&quot;
+}
+
+wordlist=&quot;one two three four five&quot;
+
+echo &quot;normal substitution, no quotes:&quot;
+countArguments $wordlist
+# -&gt; 1
+
+echo &quot;substitution with quotes&quot;
+countArguments &quot;$wordlist&quot;
+# -&gt; 1
+</pre></div>
+</div>
+<p>Therefore, it returns 1 and does not see the white spaces. It treats everything as a one expression.</p>
+<p>Next example are the arrays. In bash iteration starts the same as in every other language such as C++ or java, thus it starts from 0 and goes to length-1. Zsh range starts from 1 and goes up to length (inclusive).</p>
+<p>Lastly, the one big advantage in scripting has bash. It is older shell scripting environment and also it is pre-installed almost on every device which uses shell scripting. This being said, it has the biggest community of users and thus the biggest support and script availability. We do not need to write many scripts as much of them are publicly available. Also, the support for bash is much bigger and there is higher chance that you will find a bash expert than zsh. Even though both languages are similar there are differences where code modification is not avoidable and hence this may cause a lot of bumps on the way to getting the fully functional code.</p>
+<p><a class="reference external" href="https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/">https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/</a>
+<a class="reference external" href="https://dev.to/jasmin/a-brief-difference-between-zsh-and-bash-5ebp">https://dev.to/jasmin/a-brief-difference-between-zsh-and-bash-5ebp</a></p>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="completion.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Completion</p>
+        </div>
+    </a>
 </div>
             
         </div>

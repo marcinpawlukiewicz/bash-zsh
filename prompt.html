@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; My sample book</title>
+    <title>Prompt &#8212; My sample book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,8 +42,17 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Completion" href="completion.html" />
+    <link rel="prev" title="Configuration Files" href="configuration_files.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -87,7 +96,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="commands.html">
    Commands
@@ -103,24 +112,14 @@
    Configuration Files
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="key_bindings.html">
-   Key bindings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="prompt.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Prompt
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="completion.html">
    Completion
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scripting_differences.html">
-   Scripting differences:
   </a>
  </li>
 </ul>
@@ -156,6 +155,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/prompt.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -167,7 +183,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/marcinpawlukiewicz/bash-zsh/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/marcinpawlukiewicz/bash-zsh/issues/new?title=Issue%20on%20page%20%2Fprompt.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -195,7 +211,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Prompt</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -206,19 +222,63 @@
             
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="tex2jax_ignore mathjax_ignore section" id="prompt">
+<h1>Prompt<a class="headerlink" href="#prompt" title="Permalink to this headline">¶</a></h1>
+<p>While bash allows you only to either customize colors in the terminal or the name of the prompt (name displayed on the left in every line), this is the bare minimum zsh can offer.</p>
+<p>Look at one of the themes below for zsh:
+<img alt="" src="_images/theme_example.png" /></p>
+<p>Isn’t it impressive?</p>
+<p>We can get plenty of themes available on the internet. To get started we simply need Oh My Zsh, it can be found here: <a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh">https://github.com/ohmyzsh/ohmyzsh</a>
+Then we can search for our desired theme here: <a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/wiki/themes">https://github.com/ohmyzsh/ohmyzsh/wiki/themes</a></p>
+<p>Here is the second example, this is theme called xiong-chiamiov-plus:</p>
+<p><img alt="" src="_images/theme_example2.jpeg" /></p>
+<p>Notice how neatly the theme cooperate with the git. That what makes this shell really useful in advanced project with git. We see branches and connections very clearly. This cut down the risk of making mistakes and allows us to focus more on the actual work.</p>
+<p>Lastly, at the top of all of these themes, Oh My Zsh contains 250 plugins that can be added to the shell and make it even more customizable.</p>
+<p>One of the most popular plugins is a plugin called thefuck that correct errors in previous console command. Take a look (also take a closer look at this customized terminal):</p>
+<p><img alt="" src="_images/example_thefuck.gif" /></p>
+<p><a class="reference external" href="https://github.com/nvbn/thefuck">https://github.com/nvbn/thefuck</a></p>
+<p><a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/wiki/themes">https://github.com/ohmyzsh/ohmyzsh/wiki/themes</a></p>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="configuration_files.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Configuration Files</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="completion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Completion</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
