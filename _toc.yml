@@ -4,8 +4,10 @@
 format: jb-book
 root: intro
 chapters:
-- file: newpage
-- file: markdown
-- file: notebooks
-- file: test
+- file: commands
 - file: performance
+- file: configuration_files
+- file: key_bidings
+- file: prompt
+- file: completion
+- file: script_differences
