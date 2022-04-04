@@ -10,4 +10,4 @@ chapters:
 - file: key_bidings
 - file: prompt
 - file: completion
-- file: script_differences
+- file: scripting_differences
