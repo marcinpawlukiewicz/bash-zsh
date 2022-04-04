@@ -7,7 +7,7 @@ chapters:
 - file: commands
 - file: performance
 - file: configuration_files
-- file: key_bidings
+- file: key_bindings
 - file: prompt
 - file: completion
 - file: scripting_differences
