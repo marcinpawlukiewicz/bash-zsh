@@ -1,0 +1,22 @@
+# Commands
+When I was comparing bash and zsh my conclusion was simple, they use the same commands. So now, what is the difference?
+
+1. Zsh autocompletion is faster than bash but this is not a big difference in time and when we use simple commands I don’t think it is noticeable.
+1. Zsh has an autocompletion feature while bash need bash-completion package. For zsh default setting is set to off. Once you this this on by adding the following command to the .zsh file:
+```
+ENABLE_CORRECTION="true"
+```
+And then, for example if we type something incorrectly:
+```
+sl -la /tmp
+zsh: correct 'sl' to 'ls' [nyae]?
+```
+Where n - no, y - yes, a - abort, e - edit.  
+It is very convenient feature, especially when our line are getting longer. (https://blog.confirm.ch/zsh-tips-auto-completion-correction/).   
+
+Those are two major differences I found. Many sources give an information about wildcard (usage of * as a word) as not accessible for bash. However, I checked this on multiple versions of bash and for all of them I had this feature on by default. 
+
+However, there are couple features provided by zsh that bash does not have and can be invoked by commands and proper configuration of the .zsh file in our main directory (~). For example, zmv command can help with massive either file or directory name change. It is a game changer if we have hundreds of files. Another useful feature is build-in calculator activated by a simple command zcalc. Now, you can do simple calculations without leaving your terminal. 
+
+https://stackabuse.com/zsh-vs-bash/ 
+https://hands-on.cloud/which-terminal-is-better-bash-vs-zsh/
