@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; My sample book</title>
+    <title>Performance &#8212; My sample book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,8 +42,16 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Test of the book" href="test.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -87,7 +95,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="newpage.html">
    New Page
@@ -108,8 +116,8 @@
    Test of the book
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="performance.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Performance
   </a>
  </li>
@@ -146,6 +154,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/performance.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -157,7 +182,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/marcinpawlukiewicz/bash-zsh/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/marcinpawlukiewicz/bash-zsh/issues/new?title=Issue%20on%20page%20%2Fperformance.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -185,7 +210,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Performance</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -196,19 +221,55 @@
             
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="tex2jax_ignore mathjax_ignore section" id="performance">
+<h1>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h1>
+<p>To check the performance of both shells I used two different methods I found online. Firstly, to have a clear comparison, those are my hardware information and bash and zsh version I used in those tests:<br />
+<img alt="" src="_images/ios_spec.png" /><br />
+<img alt="" src="_images/ver_zsh.png" /></p>
+<p>First method is very easy in use, a simple check how much time does it take for a shell program to complete a simple task. In this case the task is to run a loop for a million times. Those are the results:</p>
+<p><img alt="" src="_images/bench1_zsh.png" /></p>
+<p>We can conclude that in that case, zsh outperform bash system. The total running time for zsh was 2.43s while for bash it was 4.26s and that is a huge difference.</p>
+<p>The second method I found is only a little bit more complicated but provides more tests and soever more data. Created by ShellSpec, a benchmark utility for POSIX script comparison called ShellBench. I ran all possible test available in the given sample.</p>
+<p><img alt="" src="_images/bench2_zsh.png" /></p>
+<p>Error occurs for unavailable commands/ functions in the specific shell. Besides that we can see that zsh is faster for almost every test case. Exception are <a class="reference external" href="http://eval.sh">eval.sh</a> direct assign, <a class="reference external" href="http://eval.sh">eval.sh</a> command subs, <a class="reference external" href="http://subshell.sh">subshell.sh</a> sub shell, sub <a class="reference external" href="http://shell.sh">shell.sh</a> command subs and sub <a class="reference external" href="http://shell.sh">shell.sh</a> external command. But notice that the difference in number of executions per seconds is not that big. For instance, zsh overran bash over four times in many cases.</p>
+<p>If you are interested to test it out on your own hardware, here is the link: <a class="reference external" href="https://github.com/shellspec/shellbench">https://github.com/shellspec/shellbench</a>
+All you need to do is to clone the repository and run the command.</p>
+<p>Additionally, if you are interested in the programs both shell ran, look at the above link, are the source code is available there and this way you can compare the tasks and differences of outcome.</p>
+<p>Summarizing, we see that overall, zsh performs much more efficient than bash in almost every category. There are few programs where you can put bash into consideration. Also, in low lines code you will not notice a difference so you can easily use both shells.</p>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="test.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Test of the book</p>
+        </div>
+    </a>
 </div>
             
         </div>
