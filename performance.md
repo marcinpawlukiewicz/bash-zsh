@@ -23,3 +23,7 @@ Additionally, if you are interested in the programs both shell ran, look at the 
 
 Summarizing, we see that overall, zsh performs much more efficient than bash in almost every category. There are few programs where you can put bash into consideration. Also, in low lines code you will not notice a difference so you can easily use both shells. 
 
+Sources:
+https://github.com/shellspec/shellbench
+https://towardsdatascience.com/comparing-sh-bash-ksh-and-zsh-speed-82a72bbc20ed
+https://dev.to/jasmin/a-brief-difference-between-zsh-and-bash-5ebp
