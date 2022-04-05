@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Test of the book" href="test.html" />
+    <link rel="next" title="Configuration Files" href="configuration_files.html" />
+    <link rel="prev" title="Commands" href="commands.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -90,35 +91,45 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+  <a class="reference internal" href="README.html">
+   bash-zsh
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="newpage.html">
-   New Page
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Content with notebooks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="test.html">
-   Test of the book
+  <a class="reference internal" href="commands.html">
+   Commands
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Performance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="configuration_files.html">
+   Configuration Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="key_bindings.html">
+   Key bindings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prompt.html">
+   Prompt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="completion.html">
+   Completion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scripting_differences.html">
+   Scripting differences:
   </a>
  </li>
 </ul>
@@ -223,19 +234,19 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="performance">
 <h1>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h1>
-<p>To check the performance of both shells I used two different methods I found online. Firstly, to have a clear comparison, those are my hardware information and bash and zsh version I used in those tests:<br />
+<p>To check the performance of both shells, I used two different methods I found online. Firstly, to have a clear comparison, those are my hardware information and the bash and zsh versions I used in those tests:<br />
 <img alt="" src="_images/ios_spec.png" /><br />
 <img alt="" src="_images/ver_zsh.png" /></p>
-<p>First method is very easy in use, a simple check how much time does it take for a shell program to complete a simple task. In this case the task is to run a loop for a million times. Those are the results:</p>
+<p>The first method is very easy to use, a simple check of how much time does it take for a shell program to complete a simple task. In this case, the task is to run a loop a million times. Those are the results:</p>
 <p><img alt="" src="_images/bench1_zsh.png" /></p>
-<p>We can conclude that in that case, zsh outperform bash system. The total running time for zsh was 2.43s while for bash it was 4.26s and that is a huge difference.</p>
-<p>The second method I found is only a little bit more complicated but provides more tests and soever more data. Created by ShellSpec, a benchmark utility for POSIX script comparison called ShellBench. I ran all possible test available in the given sample.</p>
+<p>We can conclude that in that case, zsh outperforms the bash system. The total running time for zsh was 2.43s, while for bash, it was 4.26s, and that is a huge difference.</p>
+<p>The second method I found is only a little bit more complicated but provides more tests and soever more data. Created by ShellSpec, a benchmark utility for POSIX script comparison called ShellBench. I ran all possible tests available in the given sample.</p>
 <p><img alt="" src="_images/bench2_zsh.png" /></p>
-<p>Error occurs for unavailable commands/ functions in the specific shell. Besides that we can see that zsh is faster for almost every test case. Exception are <a class="reference external" href="http://eval.sh">eval.sh</a> direct assign, <a class="reference external" href="http://eval.sh">eval.sh</a> command subs, <a class="reference external" href="http://subshell.sh">subshell.sh</a> sub shell, sub <a class="reference external" href="http://shell.sh">shell.sh</a> command subs and sub <a class="reference external" href="http://shell.sh">shell.sh</a> external command. But notice that the difference in number of executions per seconds is not that big. For instance, zsh overran bash over four times in many cases.</p>
-<p>If you are interested to test it out on your own hardware, here is the link: <a class="reference external" href="https://github.com/shellspec/shellbench">https://github.com/shellspec/shellbench</a>
+<p>An error occurs for unavailable commands/ functions in the specific shell. Besides that, we can see that zsh is faster for almost every test case. The exceptions are <a class="reference external" href="http://eval.sh">eval.sh</a> direct assign, <a class="reference external" href="http://eval.sh">eval.sh</a> command subs, <a class="reference external" href="http://subshell.sh">subshell.sh</a> sub shell, sub <a class="reference external" href="http://shell.sh">shell.sh</a> command subs and sub <a class="reference external" href="http://shell.sh">shell.sh</a> external command. But notice that the difference in the number of executions per second is not that big. For instance, zsh overran bash over four times in many cases.</p>
+<p>If you are interested to test it out on your hardware, here is the link: <a class="reference external" href="https://github.com/shellspec/shellbench">https://github.com/shellspec/shellbench</a>
 All you need to do is to clone the repository and run the command.</p>
-<p>Additionally, if you are interested in the programs both shell ran, look at the above link, are the source code is available there and this way you can compare the tasks and differences of outcome.</p>
-<p>Summarizing, we see that overall, zsh performs much more efficient than bash in almost every category. There are few programs where you can put bash into consideration. Also, in low lines code you will not notice a difference so you can easily use both shells.</p>
+<p>Additionally, if you are interested in the programs both shells ran, look at the above link, are the source code is available there, and this way you can compare the tasks and differences in outcome.</p>
+<p>In summarizing, we see that overall, zsh performs much more efficiently than bash in almost every category. There are a few programs where you can put bash into consideration. Also, in low lines code, you will not notice a difference so you can easily use both shells.</p>
 <p><strong>Sources:</strong><br />
 <a class="reference external" href="https://github.com/shellspec/shellbench">https://github.com/shellspec/shellbench</a><br />
 <a class="reference external" href="https://towardsdatascience.com/comparing-sh-bash-ksh-and-zsh-speed-82a72bbc20ed">https://towardsdatascience.com/comparing-sh-bash-ksh-and-zsh-speed-82a72bbc20ed</a><br />
@@ -267,12 +278,19 @@ All you need to do is to clone the repository and run the command.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="test.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="commands.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Test of the book</p>
+            <p class="prev-next-title">Commands</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="configuration_files.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Configuration Files</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

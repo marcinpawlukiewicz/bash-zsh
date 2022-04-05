@@ -1,7 +1,7 @@
 # Key bindings
-Key bindings is nothing more than our shortcuts on the keyboard to make our life simplest. For example, **CTRL+A** will throw us at the beginning of the line which is very useful if the line is long and the mistake was made at the beginning of our code. 
+Key bindings are nothing more than our shortcuts on the keyboard to make our life simplest. For example, **CTRL+A** will throw us at the beginning of the line which is very useful if the line is long and a mistake was made at the beginning of our code. 
 
-Both bash and zsh can be configured and have the same key bindings. The main difference is the syntax, both operate on a different one and command configuration looks a bit different. This is an example of this configuration: 
+Both bash and zsh can be configured and have the same key bindings. The main difference is the syntax, both operate on a different one, and the command configuration looks a bit different. This is an example of this configuration: 
 
 .inputrc for bash:
 ```
@@ -22,7 +22,7 @@ bindkey '\e[B' history-search-forward
 ```
 https://unix.stackexchange.com/questions/19426/keyboard-bindings-from-bash-to-zsh
 
-Here are some useful commands that have been already bind:
+Here are some useful commands that have been already bind:  
 1. **ALT+A** - Go to the beginning of a line.  
 2. **ALT+B** - Move one character before the cursor.  
 3. **ALT+C** - Suspends the running command/process.   

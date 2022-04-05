@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Performance" href="performance.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <link rel="prev" title="bash-zsh" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -91,8 +91,8 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+  <a class="reference internal" href="README.html">
+   bash-zsh
   </a>
  </li>
 </ul>
@@ -113,6 +113,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="key_bindings.html">
+   Key bindings
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="prompt.html">
    Prompt
   </a>
@@ -120,6 +125,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="completion.html">
    Completion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scripting_differences.html">
+   Scripting differences:
   </a>
  </li>
 </ul>
@@ -226,8 +236,8 @@
 <h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
 <p>When I was comparing bash and zsh my conclusion was simple, they use the same commands. So now, what is the difference?</p>
 <ol class="simple">
-<li><p>Zsh autocompletion is faster than bash but this is not a big difference in time and when we use simple commands I don’t think it is noticeable.</p></li>
-<li><p>Zsh has an autocompletion feature while bash need bash-completion package. For zsh default setting is set to off. Once you this this on by adding the following command to the .zsh file:</p></li>
+<li><p>Zsh autocompletion is faster than bash but this is not a big difference in time, and when we use simple commands I don’t think it is noticeable.</p></li>
+<li><p>Zsh has an autocompletion feature while bash needs a bash-completion package. For zsh default setting is set to off. Once you turn this on by adding the following command to the .zsh file:</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ENABLE_CORRECTION</span><span class="o">=</span><span class="s2">&quot;true&quot;</span>
 </pre></div>
@@ -238,9 +248,9 @@ zsh: correct &#39;sl&#39; to &#39;ls&#39; [nyae]?
 </pre></div>
 </div>
 <p>Where n - no, y - yes, a - abort, e - edit.<br />
-It is very convenient feature, especially when our line are getting longer. (<a class="reference external" href="https://blog.confirm.ch/zsh-tips-auto-completion-correction/">https://blog.confirm.ch/zsh-tips-auto-completion-correction/</a>).</p>
-<p>Those are two major differences I found. Many sources give an information about wildcard (usage of * as a word) as not accessible for bash. However, I checked this on multiple versions of bash and for all of them I had this feature on by default.</p>
-<p>However, there are couple features provided by zsh that bash does not have and can be invoked by commands and proper configuration of the .zsh file in our main directory (~). For example, zmv command can help with massive either file or directory name change. It is a game changer if we have hundreds of files. Another useful feature is build-in calculator activated by a simple command zcalc. Now, you can do simple calculations without leaving your terminal.</p>
+It is a very convenient feature, especially when our lines are getting longer (<a class="reference external" href="https://blog.confirm.ch/zsh-tips-auto-completion-correction/">https://blog.confirm.ch/zsh-tips-auto-completion-correction/</a>).</p>
+<p>Those are two major differences I found. Many sources give an information about wildcard (usage of * as a word) as not accessible for bash. However, I checked this on multiple versions of bash, and for all of the,m I had this feature on by default.</p>
+<p>However, there are a couple of features provided by zsh that bash does not have and can be invoked by commands and proper configuration of the .zsh file in our main directory (~). For example, the zmv command can help with massive either file or directory name changes. It is a game-changer if we have hundreds of files. Another useful feature is the build-in calculator activated by a simple command zcalc. Now, you can do simple calculations without leaving your terminal.</p>
 <p><a class="reference external" href="https://stackabuse.com/zsh-vs-bash/">https://stackabuse.com/zsh-vs-bash/</a>
 <a class="reference external" href="https://hands-on.cloud/which-terminal-is-better-bash-vs-zsh/">https://hands-on.cloud/which-terminal-is-better-bash-vs-zsh/</a></p>
 </div>
@@ -270,11 +280,11 @@ It is very convenient feature, especially when our line are getting longer. (<a 
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+            <p class="prev-next-title">bash-zsh</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="performance.html" title="next page">

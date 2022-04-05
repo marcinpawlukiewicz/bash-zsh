@@ -51,6 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Scripting differences:" href="scripting_differences.html" />
     <link rel="prev" title="Prompt" href="prompt.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -90,8 +91,8 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+  <a class="reference internal" href="README.html">
+   bash-zsh
   </a>
  </li>
 </ul>
@@ -112,6 +113,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="key_bindings.html">
+   Key bindings
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="prompt.html">
    Prompt
   </a>
@@ -119,6 +125,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Completion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scripting_differences.html">
+   Scripting differences:
   </a>
  </li>
 </ul>
@@ -223,16 +234,16 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="completion">
 <h1>Completion<a class="headerlink" href="#completion" title="Permalink to this headline">¶</a></h1>
-<p>Most shells so does bash and zsh use tab key to finish either a word or a phrase. This helps us to write faster and avoid a mistake that can ruin the entire command line.</p>
-<p>As it turns out not every bash has this feature enabled (if you don’t you can proceed with the following steps: <a class="reference external" href="https://faun.pub/configure-bash-auto-completion-tab-completion-on-linux-db0d9310818b">https://faun.pub/configure-bash-auto-completion-tab-completion-on-linux-db0d9310818b</a>). But once it is on, it is very simple, for example, we want to finish the name of the file we just start writing in the command line, we press tab key and it is done. Zsh works similar and you would say it is exactly the same. And you are right.</p>
-<p>However, zsh has much bigger potential and to use it, we need to know how to make the other options available as those options are off as default.</p>
+<p>Most shells so do bash and zsh use the tab key to finish either a word or a phrase. This helps us to write faster and to avoid mistakes that can ruin the entire command line.</p>
+<p>As it turns out not every bash has this feature enabled (if you don’t you can proceed with the following steps: <a class="reference external" href="https://faun.pub/configure-bash-auto-completion-tab-completion-on-linux-db0d9310818b">https://faun.pub/configure-bash-auto-completion-tab-completion-on-linux-db0d9310818b</a>). But once it is on, it is very simple, for example, if we want to finish the name of the file we just start writing it in the command line. Then, we press the tab key and it is done. Zsh works similarly and you would say it is exactly the same. And you are right.</p>
+<p>However, zsh has much bigger potential, and to use it, we need to know how to make the other options available as those options are off as default.</p>
 <p>To start the process we need to be in our main directory (~) and write out:
 compinstall</p>
 <p>The installation process is very complicated and hard in understanding. If you would like to go through it I encourage you to read this article - <a class="reference external" href="https://www.csse.uwa.edu.au/programming/linux/zsh-doc/zsh_23.html">https://www.csse.uwa.edu.au/programming/linux/zsh-doc/zsh_23.html</a>.</p>
-<p>Now, what different does this feature make? Here are main features provided by completion in zsh:</p>
+<p>Now, what difference does this feature make? Here are the main features provided by completion in zsh:</p>
 <ol class="simple">
 <li><p>Case Insensitive Completion - our shell doesn’t care then about the format of the letter, it treats big and small as one. This can be very useful, especially on macOS as the system files are case insensitive.</p></li>
-<li><p>Partial Completion - you don’t need to type directories in full, here are two examples that give you better understanding:</p></li>
+<li><p>Partial Completion - you don’t need to type directories in full, here are two examples that give you a better understanding:</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% cd /u/lo/b⇥
 % cd /usr/local/bin
@@ -243,7 +254,7 @@ compinstall</p>
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Commands with Build-in Completion - if we now that we need to use one of the option for the command of our choice and we simply do not remember it, we can find out what are the options by adding “-“ (dash) after the command:</p></li>
+<li><p>Commands with Build-in Completion - if we know that we need to use one of the options for the command of our choice and we simply do not remember it, we can find out what are the options by adding “-“ (dash) after the command:</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% cp -⇥
   -H  -- follow symlinks on the command line in recursive mode
@@ -259,7 +270,7 @@ compinstall</p>
  -v  -- show file names as they are copied 
 </pre></div>
 </div>
-<p>Lastly, once you know how to work with zsh you may build your own completions and customize your environment as much as you like.</p>
+<p>Lastly, once you know how to work with zsh, you may build your completions and customize your environment as much as you like.</p>
 <p><a class="reference external" href="https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/">https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/</a></p>
 </div>
 
@@ -294,6 +305,13 @@ compinstall</p>
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Prompt</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="scripting_differences.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Scripting differences:</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
