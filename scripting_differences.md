@@ -1,4 +1,4 @@
-# Scripting differences:
+# Scripting differences
 Generally, the base of both shells is similar as zsh is based on bash. However, the scripting differences are quite big if we talk about the code conversion from one shell to another. For example, the code in bash:
 ```
 #!/bin/bash
