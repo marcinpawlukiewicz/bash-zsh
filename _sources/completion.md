@@ -39,5 +39,6 @@ Now, what difference does this feature make? Here are the main features provided
 
 Lastly, once you know how to work with zsh, you may build your completions and customize your environment as much as you like.
 
+**Sources:**   
 https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/
 [^footnote1]: If you don’t, you can proceed with the following steps: https://faun.pub/configure-bash-auto-completion-tab-completion-on-linux-db0d9310818b)
