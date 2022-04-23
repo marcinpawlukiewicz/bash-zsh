@@ -6,8 +6,8 @@ Look at one of the themes below for zsh:
 
 Isn’t it impressive? 
 
-We can get plenty of themes available on the internet. To get started we simply need Oh My Zsh, which can be found here: https://github.com/ohmyzsh/ohmyzsh
-Then we can search for our desired theme here: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
+We can get plenty of themes available on the internet. To get started we simply need Oh My Zsh[^footnote1].
+Then we can search for our desired themes[^footnote2]. 
 
 Here is the second example, this is a theme called xiong-chiamiov-plus:
 
@@ -21,6 +21,9 @@ One of the most popular plugins is a plugin called thefuck that corrects errors 
 
 ![](images/example_thefuck.gif) 
 
-https://github.com/nvbn/thefuck 
-
+**Sources:**  
+https://github.com/nvbn/thefuck   
 https://github.com/ohmyzsh/ohmyzsh/wiki/themes
+
+[^footnote1]: Oh My Zsh repository: https://github.com/ohmyzsh/ohmyzsh
+[^footnote2]: Themes: https://github.com/ohmyzsh/ohmyzsh/wiki/themes

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scripting differences: &#8212; My sample book</title>
+    <title>Scripting differences &#8212; Major Differences and Efficiency Between zsh and bash</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -80,7 +80,7 @@
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Major Differences and Efficiency Between zsh and bash</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -128,7 +128,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Scripting differences:
+   Scripting differences
   </a>
  </li>
 </ul>
@@ -220,7 +220,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Scripting differences:</h1>
+                <h1>Scripting differences</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -232,7 +232,7 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="scripting-differences">
-<h1>Scripting differences:<a class="headerlink" href="#scripting-differences" title="Permalink to this headline">¶</a></h1>
+<h1>Scripting differences<a class="headerlink" href="#scripting-differences" title="Permalink to this headline">¶</a></h1>
 <p>Generally, the base of both shells is similar as zsh is based on bash. However, the scripting differences are quite big if we talk about the code conversion from one shell to another. For example, the code in bash:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
@@ -275,7 +275,8 @@ countArguments &quot;$wordlist&quot;
 <p>Therefore, it returns 1 and does not see the white spaces. It treats everything as one expression.</p>
 <p>The next example is the arrays. In bash iteration starts the same as in every other language such as C++ or java, thus it starts from 0 and goes to length-1. Zsh range starts from 1 and goes up to length (inclusive).</p>
 <p>Lastly, the one big advantage in scripting has bash. It is an older shell scripting environment and also it is pre-installed almost on every device which uses shell scripting. This being said, it has the biggest community of users and thus the biggest support and script availability. We do not need to write many scripts as many of them are publicly available. Also, the bash support is much bigger and there is a higher chance that you will find a bash expert than zsh. Even though both languages are similar there are differences where code modification is not avoidable and hence this may cause a lot of bumps on the way to getting a fully functional code.</p>
-<p><a class="reference external" href="https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/">https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/</a>
+<p><strong>Sources:</strong><br />
+<a class="reference external" href="https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/">https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/</a><br />
 <a class="reference external" href="https://dev.to/jasmin/a-brief-difference-between-zsh-and-bash-5ebp">https://dev.to/jasmin/a-brief-difference-between-zsh-and-bash-5ebp</a></p>
 </div>
 
@@ -318,7 +319,7 @@ countArguments &quot;$wordlist&quot;
     <footer class="footer">
   <p>
     
-      By The Jupyter Book Community<br/>
+      By Marcin Pawlukiewicz<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

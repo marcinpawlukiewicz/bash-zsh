@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Key bindings &#8212; My sample book</title>
+    <title>Key bindings &#8212; Major Differences and Efficiency Between zsh and bash</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -81,7 +81,7 @@
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Major Differences and Efficiency Between zsh and bash</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -129,7 +129,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="scripting_differences.html">
-   Scripting differences:
+   Scripting differences
   </a>
  </li>
 </ul>
@@ -243,7 +243,7 @@
 <span class="s2">&quot;\e[B&quot;</span><span class="p">:</span> <span class="n">history</span><span class="o">-</span><span class="n">search</span><span class="o">-</span><span class="n">forward</span>
 </pre></div>
 </div>
-<p>And the same commands for zsh in zle:</p>
+<p>And the same commands for zsh in zle<a class="footnote-reference brackets" href="#footnote1" id="id1">1</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># You may want to call different history search commands, e.g.</span>
 <span class="c1"># down-line-or-history or down-line-or-search (and up-*)</span>
 <span class="n">bindkey</span> <span class="s1">&#39;^P&#39;</span> <span class="n">history</span><span class="o">-</span><span class="n">search</span><span class="o">-</span><span class="n">backward</span>
@@ -252,7 +252,6 @@
 <span class="n">bindkey</span> <span class="s1">&#39;\e[B&#39;</span> <span class="n">history</span><span class="o">-</span><span class="n">search</span><span class="o">-</span><span class="n">forward</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://unix.stackexchange.com/questions/19426/keyboard-bindings-from-bash-to-zsh">https://unix.stackexchange.com/questions/19426/keyboard-bindings-from-bash-to-zsh</a></p>
 <p>Here are some useful commands that have been already bind:<br />
 1. <strong>ALT+A</strong> - Go to the beginning of a line.<br />
 2. <strong>ALT+B</strong> - Move one character before the cursor.<br />
@@ -264,8 +263,16 @@
 8. <strong>ALT+L</strong> - Uncaptalize all characters in a word after the cursor.<br />
 9. <strong>ALT+R</strong> - Undo any changes to a command that you have brought from the history if you’ve edited it.<br />
 10. <strong>ALT+.</strong> (note the dot at the end) - Use the last word of the previous command.</p>
-<p>For Mac users on zsh those commands work with left control.</p>
-<p><a class="reference external" href="https://ostechnix.com/list-useful-bash-keyboard-shortcuts/">https://ostechnix.com/list-useful-bash-keyboard-shortcuts/</a></p>
+<p>For Mac users on zsh those commands work with left control.<a class="footnote-reference brackets" href="#footnote2" id="id2">2</a></p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="footnote1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>How to bind from bash to zsh: <a class="reference external" href="https://unix.stackexchange.com/questions/19426/keyboard-bindings-from-bash-to-zsh">https://unix.stackexchange.com/questions/19426/keyboard-bindings-from-bash-to-zsh</a></p>
+</dd>
+<dt class="label" id="footnote2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>List of the commands: <a class="reference external" href="https://ostechnix.com/list-useful-bash-keyboard-shortcuts/">https://ostechnix.com/list-useful-bash-keyboard-shortcuts/</a></p>
+</dd>
+</dl>
 </div>
 
     <script type="text/x-thebe-config">
@@ -314,7 +321,7 @@
     <footer class="footer">
   <p>
     
-      By The Jupyter Book Community<br/>
+      By Marcin Pawlukiewicz<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

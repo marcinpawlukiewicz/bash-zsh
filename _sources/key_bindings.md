@@ -11,7 +11,7 @@ Both bash and zsh can be configured and have the same key bindings. The main dif
 "\e[B": history-search-forward
 ```
 
-And the same commands for zsh in zle:
+And the same commands for zsh in zle[^footnote1]:
 ```
 # You may want to call different history search commands, e.g.
 # down-line-or-history or down-line-or-search (and up-*)
@@ -20,7 +20,7 @@ bindkey '^N' history-search-forward
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 ```
-https://unix.stackexchange.com/questions/19426/keyboard-bindings-from-bash-to-zsh
+
 
 Here are some useful commands that have been already bind:  
 1. **ALT+A** - Go to the beginning of a line.  
@@ -34,6 +34,7 @@ Here are some useful commands that have been already bind:
 9. **ALT+R** - Undo any changes to a command that you have brought from the history if you’ve edited it.  
 10. **ALT+.** (note the dot at the end) - Use the last word of the previous command.  
 
-For Mac users on zsh those commands work with left control.
+For Mac users on zsh those commands work with left control.[^footnote2]
 
-https://ostechnix.com/list-useful-bash-keyboard-shortcuts/
+[^footnote1]: How to bind from bash to zsh: https://unix.stackexchange.com/questions/19426/keyboard-bindings-from-bash-to-zsh
+[^footnote2]: List of the commands: https://ostechnix.com/list-useful-bash-keyboard-shortcuts/

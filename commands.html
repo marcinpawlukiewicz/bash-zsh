@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Commands &#8212; My sample book</title>
+    <title>Commands &#8212; Major Differences and Efficiency Between zsh and bash</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -81,7 +81,7 @@
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Major Differences and Efficiency Between zsh and bash</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -129,7 +129,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="scripting_differences.html">
-   Scripting differences:
+   Scripting differences
   </a>
  </li>
 </ul>
@@ -248,11 +248,18 @@ zsh: correct &#39;sl&#39; to &#39;ls&#39; [nyae]?
 </pre></div>
 </div>
 <p>Where n - no, y - yes, a - abort, e - edit.<br />
-It is a very convenient feature, especially when our lines are getting longer (<a class="reference external" href="https://blog.confirm.ch/zsh-tips-auto-completion-correction/">https://blog.confirm.ch/zsh-tips-auto-completion-correction/</a>).</p>
+It is a very convenient feature, especially when our lines are getting longer<a class="footnote-reference brackets" href="#footnote1" id="id1">1</a>.</p>
 <p>Those are two major differences I found. Many sources give an information about wildcard (usage of * as a word) as not accessible for bash. However, I checked this on multiple versions of bash, and for all of the,m I had this feature on by default.</p>
 <p>However, there are a couple of features provided by zsh that bash does not have and can be invoked by commands and proper configuration of the .zsh file in our main directory (~). For example, the zmv command can help with massive either file or directory name changes. It is a game-changer if we have hundreds of files. Another useful feature is the build-in calculator activated by a simple command zcalc. Now, you can do simple calculations without leaving your terminal.</p>
-<p><a class="reference external" href="https://stackabuse.com/zsh-vs-bash/">https://stackabuse.com/zsh-vs-bash/</a>
+<p><strong>Sources:</strong><br />
+<a class="reference external" href="https://stackabuse.com/zsh-vs-bash/">https://stackabuse.com/zsh-vs-bash/</a><br />
 <a class="reference external" href="https://hands-on.cloud/which-terminal-is-better-bash-vs-zsh/">https://hands-on.cloud/which-terminal-is-better-bash-vs-zsh/</a></p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="footnote1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://blog.confirm.ch/zsh-tips-auto-completion-correction/">https://blog.confirm.ch/zsh-tips-auto-completion-correction/</a></p>
+</dd>
+</dl>
 </div>
 
     <script type="text/x-thebe-config">
@@ -301,7 +308,7 @@ It is a very convenient feature, especially when our lines are getting longer (<
     <footer class="footer">
   <p>
     
-      By The Jupyter Book Community<br/>
+      By Marcin Pawlukiewicz<br/>
     
         &copy; Copyright 2021.<br/>
   </p>
