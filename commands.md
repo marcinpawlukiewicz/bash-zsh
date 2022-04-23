@@ -16,7 +16,8 @@ It is a very convenient feature, especially when our lines are getting longer[^f
 
 Those are two major differences I found. Many sources give an information about wildcard (usage of * as a word) as not accessible for bash. However, I checked this on multiple versions of bash, and for all of the,m I had this feature on by default. 
 
-However, there are a couple of features provided by zsh that bash does not have and can be invoked by commands and proper configuration of the .zsh file in our main directory (~). For example, the zmv command can help with massive either file or directory name changes. It is a game-changer if we have hundreds of files. Another useful feature is the build-in calculator activated by a simple command zcalc. Now, you can do simple calculations without leaving your terminal {cite}`ruby`.
+However, there are a couple of features provided by zsh that bash does not have and can be invoked by commands and proper configuration of the .zsh file in our main directory (~). For example, the zmv command can help with massive either file or directory name changes. It is a game-changer if we have hundreds of files. Another useful feature is the build-in calculator activated by a simple command zcalc. Now, you can do simple calculations without leaving your terminal {cite:p}`holdgraf_portable_2017`.
+ Edited 
 
 **Sources:**   
 ```{bibliography}```
