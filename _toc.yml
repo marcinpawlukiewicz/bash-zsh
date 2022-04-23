@@ -11,3 +11,4 @@ chapters:
 - file: prompt
 - file: completion
 - file: scripting_differences
+- file: Summary
