@@ -1,7 +1,7 @@
 # Completion
 Most shells so do bash and zsh use the tab key to finish either a word or a phrase. This helps us to write faster and to avoid mistakes that can ruin the entire command line. 
 
-As it turns out not every bash has this feature enabled (if you don’t you can proceed with the following steps: https://faun.pub/configure-bash-auto-completion-tab-completion-on-linux-db0d9310818b). But once it is on, it is very simple, for example, if we want to finish the name of the file we just start writing it in the command line. Then, we press the tab key and it is done. Zsh works similarly and you would say it is exactly the same. And you are right.
+As it turns out not every bash has this feature enabled[^footnote1]. But once it is on, it is very simple, for example, if we want to finish the name of the file we just start writing it in the command line. Then, we press the tab key and it is done. Zsh works similarly and you would say it is exactly the same. And you are right.
 
 However, zsh has much bigger potential, and to use it, we need to know how to make the other options available as those options are off as default.  
 
@@ -40,3 +40,4 @@ Now, what difference does this feature make? Here are the main features provided
 Lastly, once you know how to work with zsh, you may build your completions and customize your environment as much as you like.
 
 https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/
+[^footnote1]: If you don’t, you can proceed with the following steps: https://faun.pub/configure-bash-auto-completion-tab-completion-on-linux-db0d9310818b)
