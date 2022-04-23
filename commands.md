@@ -18,7 +18,9 @@ Those are two major differences I found. Many sources give an information about 
 
 However, there are a couple of features provided by zsh that bash does not have and can be invoked by commands and proper configuration of the .zsh file in our main directory (~). For example, the zmv command can help with massive either file or directory name changes. It is a game-changer if we have hundreds of files. Another useful feature is the build-in calculator activated by a simple command zcalc. Now, you can do simple calculations without leaving your terminal. 
 
-**Sources:**    
+**Sources:**   
+```{bibliography}```
+\bibliography{stackabuse}
 https://stackabuse.com/zsh-vs-bash/   
 https://hands-on.cloud/which-terminal-is-better-bash-vs-zsh/
 
