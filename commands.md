@@ -1,6 +1,7 @@
+(my-label)=
 # Commands
 When I was comparing bash and zsh my conclusion was simple, they use the same commands. So now, what is the difference?
-
+Here's some text and [here's my label](my-label).
 1. Zsh autocompletion is faster than bash but this is not a big difference in time, and when we use simple commands I don’t think it is noticeable.
 1. Zsh has an autocompletion feature while bash needs a bash-completion package. For zsh default setting is set to off. Once you turn this on by adding the following command to the .zsh file:
 ```
