@@ -132,6 +132,11 @@
    Scripting differences
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Summary.html">
+   Summary
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -237,20 +242,26 @@
 <p>To check the performance of both shells, I used two different methods I found online. Firstly, to have a clear comparison, those are my hardware information and the bash and zsh versions I used in those tests:<br />
 <img alt="" src="_images/ios_spec.png" /><br />
 <img alt="" src="_images/ver_zsh.png" /></p>
-<p>The first method is very easy to use, a simple check of how much time does it take for a shell program to complete a simple task. In this case, the task is to run a loop a million times. Those are the results:</p>
+<p>The first method is very easy to use, a simple check of how much time does it take for a shell program to complete a simple task. In this case, the task is to run a loop a million times<a class="footnote-reference brackets" href="#footnote2" id="id1">1</a>. Those are the results:</p>
 <p><img alt="" src="_images/bench1_zsh.png" /></p>
 <p>We can conclude that in that case, zsh outperforms the bash system. The total running time for zsh was 2.43s, while for bash, it was 4.26s, and that is a huge difference.</p>
-<p>The second method I found is only a little bit more complicated but provides more tests and soever more data. Created by ShellSpec, a benchmark utility for POSIX script comparison called ShellBench. I ran all possible tests available in the given sample.</p>
+<p>The second method I found is only a little bit more complicated but provides more tests and soever more data. Created by ShellSpec, a benchmark utility for POSIX script comparison called ShellBench<a class="footnote-reference brackets" href="#footnote1" id="id2">2</a>. I ran all possible tests available in the given sample.</p>
 <p><img alt="" src="_images/bench2_zsh.png" /></p>
 <p>An error occurs for unavailable commands/ functions in the specific shell. Besides that, we can see that zsh is faster for almost every test case. The exceptions are <a class="reference external" href="http://eval.sh">eval.sh</a> direct assign, <a class="reference external" href="http://eval.sh">eval.sh</a> command subs, <a class="reference external" href="http://subshell.sh">subshell.sh</a> sub shell, sub <a class="reference external" href="http://shell.sh">shell.sh</a> command subs and sub <a class="reference external" href="http://shell.sh">shell.sh</a> external command. But notice that the difference in the number of executions per second is not that big. For instance, zsh overran bash over four times in many cases.</p>
 <p>If you are interested to test it out on your hardware, here is the link: <a class="reference external" href="https://github.com/shellspec/shellbench">https://github.com/shellspec/shellbench</a>
 All you need to do is to clone the repository and run the command.</p>
 <p>Additionally, if you are interested in the programs both shells ran, look at the above link, are the source code is available there, and this way you can compare the tasks and differences in outcome.</p>
 <p>In summarizing, we see that overall, zsh performs much more efficiently than bash in almost every category. There are a few programs where you can put bash into consideration. Also, in low lines code, you will not notice a difference so you can easily use both shells.</p>
-<p><strong>Sources:</strong><br />
-<a class="reference external" href="https://github.com/shellspec/shellbench">https://github.com/shellspec/shellbench</a><br />
-<a class="reference external" href="https://towardsdatascience.com/comparing-sh-bash-ksh-and-zsh-speed-82a72bbc20ed">https://towardsdatascience.com/comparing-sh-bash-ksh-and-zsh-speed-82a72bbc20ed</a><br />
-<a class="reference external" href="https://dev.to/jasmin/a-brief-difference-between-zsh-and-bash-5ebp">https://dev.to/jasmin/a-brief-difference-between-zsh-and-bash-5ebp</a></p>
+<p><strong>Sources:</strong></p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="footnote2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://towardsdatascience.com/comparing-sh-bash-ksh-and-zsh-speed-82a72bbc20ed">https://towardsdatascience.com/comparing-sh-bash-ksh-and-zsh-speed-82a72bbc20ed</a></p>
+</dd>
+<dt class="label" id="footnote1"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/shellspec/shellbench">https://github.com/shellspec/shellbench</a></p>
+</dd>
+</dl>
 </div>
 
     <script type="text/x-thebe-config">

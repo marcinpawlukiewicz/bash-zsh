@@ -11,15 +11,13 @@ And then, for example if we type something incorrectly:
 sl -la /tmp
 zsh: correct 'sl' to 'ls' [nyae]?
 ```
-Where n - no, y - yes, a - abort, e - edit.  
-It is a very convenient feature, especially when our lines are getting longer[^footnote1].   
+Where n - no, y - yes, a - abort, e - edit[^footnote1].  
+It is a very convenient feature, especially when our lines are getting longer[^footnote2].   
 
 Those are two major differences I found. Many sources give an information about wildcard (usage of * as a word) as not accessible for bash. However, I checked this on multiple versions of bash, and for all of the,m I had this feature on by default. 
 
-However, there are a couple of features provided by zsh that bash does not have and can be invoked by commands and proper configuration of the .zsh file in our main directory (~). For example, the zmv command can help with massive either file or directory name changes. It is a game-changer if we have hundreds of files. Another useful feature is the build-in calculator activated by a simple command zcalc. Now, you can do simple calculations without leaving your terminal.
+However, there are a couple of features provided by zsh that bash does not have and can be invoked by commands and proper configuration of the .zsh file in our main directory (~). For example, the zmv command can help with massive either file or directory name changes. It is a game-changer if we have hundreds of files. Another useful feature is the build-in calculator activated by a simple command zcalc. Now, you can do simple calculations without leaving your terminal[^footnote3].
 
-**Sources:**   
-https://stackabuse.com/zsh-vs-bash/  
-https://hands-on.cloud/which-terminal-is-better-bash-vs-zsh/
-
-[^footnote1]: https://blog.confirm.ch/zsh-tips-auto-completion-correction/
+[^footnote1]: https://hands-on.cloud/which-terminal-is-better-bash-vs-zsh/
+[^footnote2]: https://blog.confirm.ch/zsh-tips-auto-completion-correction/
+[^footnote3]: https://stackabuse.com/zsh-vs-bash/  
