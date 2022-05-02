@@ -20,10 +20,8 @@ Lastly, at the top of all of these themes, Oh My Zsh contains 250 plugins that c
 One of the most popular plugins is a plugin called thefuck that corrects errors in the previous console command. Take a look (also take a closer look at this customized terminal):
 
 ![](images/example_thefuck.gif) 
-
-**Sources:**  
-https://github.com/nvbn/thefuck   
-https://github.com/ohmyzsh/ohmyzsh/wiki/themes
+[^footnote3]
 
 [^footnote1]: Oh My Zsh repository: https://github.com/ohmyzsh/ohmyzsh
 [^footnote2]: Themes: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
+[^footnote3]: https://github.com/nvbn/thefuck  
